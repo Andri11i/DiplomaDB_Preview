@@ -43,12 +43,7 @@ namespace DiplomaDB_Preview.Models
         public bool IsAdmin { get; set; } = false;
 
         public ICollection<UserRole>? UserRoles { get; set; }
-        public ICollection<Event>? OrganizedEvents { get; set; }
-        public ICollection<Comment>? Comments { get; set; }
-        public ICollection<Participant>? Participants { get; set; }
-        public ICollection<Rating>? Ratings { get; set; }
-        public ICollection<Favorite>? Favorites { get; set; }
-        public ICollection<Sponsor>? Sponsors { get; set; }
+
     }
 
     public class Role
