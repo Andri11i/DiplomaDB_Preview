@@ -53,3 +53,14 @@ public class Repository<T> : IRepository<T> where T : class
         }
     }
 }
+
+public class AsyncRepository<T> : Repository<T> where T : class
+{
+    public AsyncRepository(DbContext context) : base(context) { }
+
+    public async Task AddAssync(T entity)
+    {
+        _dbSet.Add(entity);
+        await _context.SaveChangesAsync();
+    }
+}

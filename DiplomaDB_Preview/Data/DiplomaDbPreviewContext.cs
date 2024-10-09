@@ -16,7 +16,7 @@ public partial class DiplomaDbPreviewContext : DbContext
     {
     }
 
-    DbSet<User> Users { get; set; }
+    public DbSet<User> Users { get; set; }
     DbSet<Role> Roles { get; set; }
     DbSet<UserRole> UserRoles { get; set; }
     
@@ -32,7 +32,7 @@ public partial class DiplomaDbPreviewContext : DbContext
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=TUF;Initial Catalog=Diploma_DB_Preview;Integrated Security=True");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\maksb\\Documents\\testBase.mdf;Integrated Security=True;Connect Timeout=30");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
